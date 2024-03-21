@@ -9,6 +9,7 @@ const DiceImage = document.getElementById("ImagemDado");
 const HoldBtn = document.getElementById("HoldPoints");
 const ScoreTotal0 = document.getElementById("score--0");
 const ScoreTotal1 = document.getElementById("score--1");
+const newGame = document.getElementById("NewGameBtn");
 
 const roll = document.getElementById("RollDice");
 const hold = document.getElementById("HoldPoints");
@@ -52,3 +53,13 @@ HoldBtn.addEventListener("click", function () {
   }
   proximoJogador();
 });
+
+newGame.addEventListener("click", function() {
+  scores = [0, 0];
+  JogadorAtivo = 0;
+  currentScore = 0;
+  ScoreAtual0.textContent = currentScore;
+  ScoreAtual1.textContent = currentScore;
+  ScoreTotal0.textContent = scores[0];
+  ScoreTotal1.textContent = scores[1];
+})
